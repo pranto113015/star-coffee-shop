@@ -18,6 +18,7 @@
   --secondary-color: #1b1b1b;
   --text-color: #555;
   --bg-color: #fff;
+  --hover-color: #8a6f4d;
 
   /* box shadow */
   --box-shadow: 2px 2px 10px 4px rgba(14, 55, 54, 0.15);
@@ -241,10 +242,45 @@ transition: 0.2s all linear;
 
 }
 
+.customers-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
 
+.customers-container .box{
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  text-align: center;
+}
 
+.stars .bx{
+  color: var(--main-color);
+}
 
+.customers-container .box p{
+  font-size: 0.938rem;
+  margin: 0.5rem 0 1.1rem;
+}
 
+.customers-container .box h2{
+  font-size: 1rem;
+  font-weight: 600;
+}
 
+.customers-container .box img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 
+.customers-container .box:hover{
+background: var(--hover-color);
+  transition: 0.3s all linear;
+  color: #fff;
+  
+}
 
