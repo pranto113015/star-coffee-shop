@@ -16,6 +16,7 @@
 :root {
   --main-color: #bc9667;
   --secondary-color: #1b1b1b;
+  --second-color: #aba6a6;
   --text-color: #555;
   --bg-color: #fff;
   --hover-color: #8a6f4d;
@@ -44,9 +45,12 @@ header {
   justify-content: space-between;
   padding: 18px 100px;
   transition: 0.5s linear;
-  background: var(--text-color);
 }
 
+header.shadow {
+  box-shadow: var(--box-shadow);
+  background: var(--text-color);
+}
 .logo img {
   width: 60px;
 }
@@ -161,7 +165,7 @@ header {
 }
 .about-img img {
   border-radius: 0.5rem;
-  width: 500px;
+  /* width: 500px; */
 }
 
 .about-text h2 {
@@ -303,9 +307,9 @@ header {
 }
 .social a .bx {
   font-size: 24px;
-
+  color: var(--bg-color);
   padding: 10px;
-  background: #c9c7c7;
+  background: var(--second-color);
   border-radius: 0.2rem;
 }
 .social a .bx:hover {
@@ -326,4 +330,100 @@ header {
 .contact i {
   font-size: 20px;
   margin-right: 1rem;
+}
+.copyright {
+  text-align: center;
+  padding: 15px;
+  background: var(--second-color);
+  color: var(--bg-color);
+  font-size: 0.938rem;
+}
+
+@media (max-width: 1058px) {
+  header {
+    padding: 16px 60px;
+  }
+  section {
+    padding: 50px 60px;
+  }
+  .home-text h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 16px 4%;
+  }
+  section {
+    padding: 50px 4%;
+  }
+  .home-text h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 12px 4%;
+  }
+  #menu-icon {
+    display: inline;
+  }
+  .navbar {
+    position: absolute;
+    top: -570px;
+    left: 0;
+    right: 0;
+    display: flex;
+    background: var(--second-color);
+    flex-direction: column;
+    row-gap: 1.4rem;
+    padding: 20px;
+    transition: 0.3s;
+    text-align: center;
+  }
+  .navbar a {
+    color: var(--text-color);
+  }
+  .navbar a:hover {
+    color: var(--bg-color);
+  }
+  .navbar.active {
+    top: 100%;
+  }
+  .about {
+    align-items: center;
+  }
+}
+
+@media (max-width: 360px) {
+  header {
+    padding: 9px 4%;
+  }
+  .logo img {
+    width: 45px;
+  }
+  .home-text {
+    padding-top: 15px;
+  }
+  .home-text h1 {
+    font-size: 1.4rem;
+  }
+  .home-text p{
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+  .about-img{
+    order: 2;
+  }
+  .about-text{
+    text-align: center;
+  }
+  .about-text h2{
+    font-size: 1.2rem;
+  }
+  .heading h2 {
+    font-size: 1.2rem;
+  }
 }
