@@ -281,7 +281,7 @@ header {
   color: #fff;
 }
 
-.footer{
+.footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, auto));
   gap: 1.5rem;
@@ -292,30 +292,38 @@ header {
   margin-bottom: 1rem;
 }
 
-.footer-box p{
+.footer-box p {
   font-size: 0.938rem;
   margin-bottom: 1rem;
 }
-.social{
+.social {
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
 }
-.social a .bx{
+.social a .bx {
   font-size: 24px;
 
   padding: 10px;
   background: #c9c7c7;
   border-radius: 0.2rem;
 }
-.social a .bx:hover{
+.social a .bx:hover {
   color: var(--bg-color);
   background: var(--main-color);
   transition: 0.2s all linear;
 }
-.contact{
-
+.contact {
   display: flex;
   flex-direction: column;
   row-gap: 0.5rem;
+}
+
+.contact span {
+  display: flex;
+  align-items: center;
+}
+.contact i {
+  font-size: 20px;
+  margin-right: 1rem;
 }
